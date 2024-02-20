@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selectors, Box Model, Display, Positions</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main_complete.css">
 </head>
 <body>
     
@@ -15,13 +15,14 @@
         <a href="https://www.w3schools.com/css/css_selectors.asp" target="_blank">CSS Selectors</a>
         <a href="https://www.w3schools.com/css/css_display_visibility.asp" target="_blank">CSS Displays</a>
         <a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">CSS Positions</a>
+        <a href="flex_complete.html">Flex Box Example</a>
     </div>
 
     <section>
         <h1>CSS Box Model</h1>
         <hr>
-        <img src="https://picsum.photos/300/100?random=1" class="box-model"></img>
-        <img src="https://picsum.photos/300/100?random=2" class="box-model"></img>
+        <img src="https://picsum.photos/300/100?random=1" class="box-model" />
+        <img src="https://picsum.photos/300/100?random=2" class="box-model" />
     </section>
 
     
@@ -58,9 +59,9 @@
         <div class="selectors">
             <h3>Pseduo-Class Selectors</h3>
 
-            <a target="_blank" href="https://codingtemple.com/">CodingTemple</a>
-            <a target="_blank" href="https://www.w3schools.com/css/css_pseudo_classes.asp">All Pseudo-Classes</a>
-            <a target="_blank" href="https://randomlink.com">Random Link</a>
+            <a href="https://codingtemple.com/">CodingTemple</a>
+            <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">All Pseudo-Classes</a>
+            <a href="https://randomlink.com">Random Link</a>
             
             <div class="child-example">
                 <p>This is the first of many</p>
@@ -72,7 +73,8 @@
 
         </div>
         <div class="selectors">
-            <h3>Pseduo-Element Selectors</h3>
+            <h3 id="after-example">Pseduo-Element Selectors</h3>
+            <!-- <img src="https://picsum.photos/100" alt="random"> -->
 
             <p id="first-line">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
@@ -94,7 +96,7 @@
         <hr>
         <!-- 
             The Block Level Element
-            Starts a new line and requiresfull width availability.
+            Starts a new line and requires full width availability.
             Includes: div, h1-h6, p, form, header, footer, section, and aside 
         -->
         <div class="block-level">
@@ -109,8 +111,8 @@
         </div>
 
         <!-- 
-            And inline element DOES NOT start a new line andonly uses spacerequired for content.Includes: span, a, img
-         -->
+            And inline element DOES NOT start a new line and only uses space required for content.Includes: span, a, img
+        -->
         <p>This is a new paragraph and click <a href='https://codingtemple.com'>HERE</a> for the Coding Temple Home Page</p>
 
         <div class="gallery">
@@ -120,6 +122,7 @@
             <img src="https://picsum.photos/200?random=13" alt="">
             <img src="https://picsum.photos/200?random=14" alt="">
         </div>
+        <button id="test">Click Me</button>
     </section>
 
     <section class="positions">
@@ -130,8 +133,16 @@
             <img src="https://picsum.photos/200?random=21" alt="" id="img-2">
             <img src="https://picsum.photos/200?random=22" alt="" id="img-3">
         </div>
+        <!-- <h1>Another Header</h1> -->
     </section>
     
 
+    <script>
+        let button = document.getElementById('test')
+        button.addEventListener('click', () => {
+            let middlePhoto = document.getElementById('middle')
+            middlePhoto.style.display = middlePhoto.style.display === 'none' ? 'inline' : 'none'
+        })
+    </script>
 </body>
 </html>
